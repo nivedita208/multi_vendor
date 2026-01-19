@@ -5,6 +5,12 @@ app_description = "Multi vendor management app built using Frappe Framework."
 app_email = "niveditasamarth123@gmail.com"
 app_license = "MIT"
 
+doc_events = {
+    "Sales Order": {
+        "validate": "posawesome.custom_code.sales_order_v1.is_marketplace_order",
+        "on_submit": "posawesome.custom_code.sales_order_v1.create_seller_orders"
+        }
+} 
 # Includes in <head>
 # ------------------
 
