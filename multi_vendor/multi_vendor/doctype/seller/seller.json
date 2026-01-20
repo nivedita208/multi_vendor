@@ -22,7 +22,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Supplier",
-   "options": "Supplier"
+   "options": "Supplier",
+   "reqd": 1
   },
   {
    "fieldname": "seller_name",
@@ -34,7 +35,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": " Portal User",
-   "options": "User"
+   "options": "User",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_rl9qn",
@@ -51,7 +53,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Default Warehouse",
-   "options": "Warehouse"
+   "options": "Warehouse",
+   "reqd": 1
   },
   {
    "fieldname": "naming_series",
@@ -64,7 +67,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 10:30:22.150333",
+ "modified": "2026-01-20 22:54:00.636241",
  "modified_by": "Administrator",
  "module": "Multi Vendor",
  "name": "Seller",

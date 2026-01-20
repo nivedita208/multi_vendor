@@ -81,7 +81,7 @@ def make_dn_from_seller_order(seller_order_name):
 
 	return dn.name
 
-#############################################
+###################sales invoice button code ##########################
 
 @frappe.whitelist()
 def make_si_from_seller_order(seller_order_name):
