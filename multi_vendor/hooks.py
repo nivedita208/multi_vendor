@@ -16,7 +16,7 @@ fixtures = [
     {
         "dt": "Custom Field",
         "filters": [
-            ["module", "in", "multi_vendor"] ]
+            ["module", "in", "Multi Vendor"] ]
     }
 ]
 
