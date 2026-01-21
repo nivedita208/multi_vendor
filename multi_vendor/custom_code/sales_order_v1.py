@@ -48,21 +48,25 @@ def is_marketplace_order(doc, method):
 
 def create_seller_orders(doc, method):
     
+    if not doc.custom_is_marketplace_order:
+        return
+    
     # prevent creation for amended form
     if doc.amended_from:
         return
     
-    so = frappe.get_doc("Sales Order", doc.name)
-    
+    # so = frappe.get_doc("Sales Order", doc.name)
+    so = doc
+
     # for grouping items seller wise
     seller_items_map = {}
     created_seller_orders = []
 
     for item in so.items:
-        if not item.custom_seller:
-            frappe.throw(f"Seller not set for item {item.item_code}")
+        
 
         seller_items_map.setdefault(item.custom_seller, []).append(item)
+
 
     #loop for gruoped items based on sellers
     for custom_seller, items in seller_items_map.items():
