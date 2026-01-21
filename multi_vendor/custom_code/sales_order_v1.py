@@ -11,8 +11,8 @@ def is_marketplace_order(doc, method):
     #     return
 
     #Buyer must be set
-    if not doc.custom_marketplace_buyer:
-        frappe.throw("Marketplace Buyer is mandatory")
+    # if not doc.custom_marketplace_buyer:
+    #     frappe.throw("Marketplace Buyer is mandatory")
 
     # Validate each item
     for row in doc.items:
