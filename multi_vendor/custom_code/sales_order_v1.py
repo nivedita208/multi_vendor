@@ -2,12 +2,15 @@ import frappe
 
 
 def is_marketplace_order(doc, method):
-
-    # Only for marketplace orders
-    if not doc.custom_is_marketplace_order:
+    
+    if doc.order_type != "Shopping Cart":
         return
 
-    # Buyer must be set
+    # Only for marketplace orders
+    # if not doc.custom_is_marketplace_order:
+    #     return
+
+    Buyer must be set
     if not doc.custom_marketplace_buyer:
         frappe.throw("Marketplace Buyer is mandatory")
 
@@ -48,8 +51,10 @@ def is_marketplace_order(doc, method):
 
 def create_seller_orders(doc, method):
     
-    if not doc.custom_is_marketplace_order:
+    if doc.order_type != "Shopping Cart":
         return
+    # if not doc.custom_is_marketplace_order:
+    #     return
     
     # prevent creation for amended form
     if doc.amended_from:
