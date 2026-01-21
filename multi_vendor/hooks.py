@@ -7,8 +7,8 @@ app_license = "MIT"
 
 doc_events = {
     "Sales Order": {
-        "validate": "posawesome.custom_code.sales_order_v1.is_marketplace_order",
-        "on_submit": "posawesome.custom_code.sales_order_v1.create_seller_orders"
+        "validate": "multi_vendor.custom_code.sales_order_v1.is_marketplace_order",
+        "on_submit": "multi_vendor.custom_code.sales_order_v1.create_seller_orders"
         }
 }
 
@@ -17,6 +17,12 @@ fixtures = [
         "dt": "Custom Field",
         "filters": [
             ["module", "in", "Multi Vendor"] ]
+    },
+     {
+        "dt": "Workspace",
+        "filters": [
+            ["name", "in", "Admin"]
+        ]
     }
 ]
 
