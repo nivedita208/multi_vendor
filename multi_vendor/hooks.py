@@ -10,7 +10,20 @@ doc_events = {
         "validate": "posawesome.custom_code.sales_order_v1.is_marketplace_order",
         "on_submit": "posawesome.custom_code.sales_order_v1.create_seller_orders"
         }
-} 
+}
+
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [
+            ["name", "in", [
+                "Item-custom_seller",
+                "Sales Order-custom_is_marketplace_order"
+            ]]
+        ]
+    }
+]
+
 # Includes in <head>
 # ------------------
 
