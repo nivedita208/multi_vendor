@@ -16,17 +16,7 @@ fixtures = [
     {
         "dt": "Custom Field",
         "filters": [
-            ["name", "in", [
-                "Item-custom_seller",
-                "Sales Order-custom_is_marketplace_order",
-                "Sales Order-custom_marketplace_buyer",
-                "Sales Order Item-custom_seller",
-                "Sales Order Item-custom_seller_warehouse",
-                "Sales Order Item-custom_seller_order",
-                "Delivery Note-custom_seller_order_",
-                "Sales Invoice-custom_seller_order"                
-            ]]
-        ]
+            ["name", "in", "multi_vendor"] ]
     }
 ]
 
