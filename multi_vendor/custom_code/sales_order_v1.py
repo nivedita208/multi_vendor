@@ -99,13 +99,13 @@ def create_seller_orders(doc, method):
         created_seller_orders.append(seller_order.name)
 
         #linking back seller_order IDs in sales order item childtable
-        for so_item in items:
-            frappe.db.set_value(
-                "Sales Order Item",
-                so_item.name,
-                "custom_seller_order",
-                seller_order.name
-            )
+        # for so_item in items:
+        #     frappe.db.set_value(
+        #         "Sales Order Item",
+        #         so_item.name,
+        #         "custom_seller_order",
+        #         seller_order.name
+        #     )
             
     if created_seller_orders:
         frappe.msgprint(
