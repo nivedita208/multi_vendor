@@ -10,7 +10,7 @@ def is_marketplace_order(doc, method):
     # if not doc.custom_is_marketplace_order:
     #     return
 
-    Buyer must be set
+    #Buyer must be set
     if not doc.custom_marketplace_buyer:
         frappe.throw("Marketplace Buyer is mandatory")
 
