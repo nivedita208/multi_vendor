@@ -5,6 +5,16 @@ def is_marketplace_order(doc, method):
     
     if doc.order_type != "Shopping Cart":
         return
+    
+    buyer = frappe.db.get_value(
+        "Buyer",
+        {"customer": doc.customer},
+        "name"
+    )
+    if not buyer:
+        frappe.throw(f"No Buyer found for Customer {doc.customer}")
+        
+    doc.custom_marketplace_buyer = buyer
 
     # Only for marketplace orders
     # if not doc.custom_is_marketplace_order:

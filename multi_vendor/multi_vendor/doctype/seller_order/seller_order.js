@@ -11,7 +11,7 @@ frappe.ui.form.on('Seller Order', {
 					"Are you sure you want to create & submit Delivery Note?",
 					function () {
 						frappe.call({
-							method: "posawesome.posawesome.doctype.seller_order.seller_order.make_dn_from_seller_order",
+							method: "multi_vendor.multi_vendor.doctype.seller_order.seller_order.make_dn_from_seller_order",
 							args: {
 								seller_order_name: frm.doc.name
 							},
@@ -37,7 +37,7 @@ frappe.ui.form.on('Seller Order', {
 					'Are you sure you want to create and submit sales invoice?',
 					function(){
 						frappe.call({
-							method:"posawesome.posawesome.doctype.seller_order.seller_order.make_si_from_seller_order",
+							method:"multi_vendor.multi_vendor.doctype.seller_order.seller_order.make_si_from_seller_order",
 							args:{
 								seller_order_name:frm.doc.name
 							},
